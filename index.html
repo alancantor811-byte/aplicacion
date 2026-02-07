@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prisma Vivo — Laboratorio de Realidades</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <header class="hero">
+        <div>
+          <p class="badge">Nueva experiencia cognitiva</p>
+          <h1>Prisma Vivo</h1>
+          <p class="subtitle">
+            Un laboratorio de realidades emergentes donde tus emociones, ideas y
+            decisiones forman un universo que nunca existió.
+          </p>
+        </div>
+        <div class="orb" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
+
+      <main class="grid">
+        <section class="panel">
+          <h2>1. Energía creativa</h2>
+          <p>
+            Elige cómo fluye tu energía hoy. Cada elección modifica el ambiente
+            visual y la narrativa generativa del prisma.
+          </p>
+          <div class="choices" role="group" aria-label="Energía creativa">
+            <button data-energy="calma" class="pill active">Calma</button>
+            <button data-energy="fuego" class="pill">Fuego</button>
+            <button data-energy="explora" class="pill">Explora</button>
+            <button data-energy="futuro" class="pill">Futuro</button>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>2. Coordenadas de asombro</h2>
+          <p>
+            Marca tres coordenadas para encender el mapa sensorial. Puedes
+            moverlas en tiempo real.
+          </p>
+          <div class="sliders">
+            <label>
+              Ritmo
+              <input type="range" min="0" max="100" value="42" data-axis="ritmo" />
+            </label>
+            <label>
+              Intensidad
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value="68"
+                data-axis="intensidad"
+              />
+            </label>
+            <label>
+              Horizonte
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value="54"
+                data-axis="horizonte"
+              />
+            </label>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>3. Ritual de enfoque</h2>
+          <p>
+            Dibuja un ritual de 90 segundos. El prisma lo transforma en un
+            pulso de claridad.
+          </p>
+          <div class="ritual">
+            <button id="ritual-start" class="primary">Iniciar ritual</button>
+            <div class="timer" aria-live="polite">
+              <span id="ritual-time">01:30</span>
+              <span class="status" id="ritual-status">En pausa</span>
+            </div>
+            <div class="pulse" id="ritual-pulse"></div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>4. Bitácora de realidad</h2>
+          <p>
+            Escribe una intención. El prisma responde con una promesa narrativa
+            única para tu universo.
+          </p>
+          <form id="intention-form" class="intention">
+            <input
+              type="text"
+              name="intention"
+              placeholder="Quiero descubrir..."
+              required
+            />
+            <button type="submit" class="primary">Invocar</button>
+          </form>
+          <div class="response" id="intention-response">
+            Tu universo está listo para escuchar.
+          </div>
+        </section>
+      </main>
+
+      <section class="dashboard">
+        <div class="metric">
+          <h3>Clima emocional</h3>
+          <p id="metric-emotion">Sereno</p>
+        </div>
+        <div class="metric">
+          <h3>Latido actual</h3>
+          <p id="metric-beat">42 bpm</p>
+        </div>
+        <div class="metric">
+          <h3>Visión emergente</h3>
+          <p id="metric-vision">Auroras líquidas</p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
